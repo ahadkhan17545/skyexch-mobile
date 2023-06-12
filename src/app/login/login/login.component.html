@@ -1,0 +1,64 @@
+<div data-role="page" tabindex="0" class="ui-page ui-page-theme-a ui-page-active">
+
+    <header class="login-head">
+        <a routerLink="{{highCom}}" class="close ui-link"></a>
+        <h1>{{siteName}}</h1>
+        <div id="powerWrap" class="betfair-wrap">
+            <p>{{Update?.poweredby}}</p>
+            <span>
+                <!-- <img  src="https://www.static112233.com/m/assets/images/mobile/login/betfair_black.png" alt="betfair_black" draggable="false"> -->
+            </span>
+        </div>
+    </header>
+
+    <form [formGroup]="LoginForm" (ngSubmit)="Login()">
+        <dl class="form-login">
+            <dd id="loginNameErrorClass" [ngClass]="{'error':f.userName.invalid && (f.userName.touched || submitted)}">
+                <input type="email" id="loginName" data-role="none" placeholder="{{Update?.username}}" formControlName="userName">
+            </dd>
+            <dd id="passwordErrorClass"
+                [ngClass]="{'error':f.password.invalid && (f.password.touched || submitted) && !f.userName.invalid}">
+                <input [type]="!visiblePassword ? 'password' : 'text'" id="password" data-role="none" placeholder="{{Update?.password}}" formControlName="password">
+                <span (click)="showPassword()" *ngIf="!islc247allcondition && !isBajiSites || siteName=='runx'  || siteName=='sports365'  || siteName=='vellki' || siteName=='rajbet'"  class="fa" [ngClass]="{'fa-eye': visiblePassword,'fa-eye-slash': !visiblePassword}"></span>
+            </dd>
+            <dd id="captchaErrorClass" *ngIf="isCaptcha"
+                [ngClass]="{'error':f.captcha.invalid && (f.captcha.touched || submitted) && !f.userName.invalid && !f.password.invalid}">
+                <input type="number" id="captcha" pattern="[0-9]*" data-role="none" placeholder="{{Update?.validationcode}}"
+                    autocomplete="off" inputmode="numeric" formControlName="captcha"> <img id="authenticateImage" src="data:image/jpeg;base64, iVBORw0KGgoAAAANSUhEUgAAAKUAAAA3CAYAAABthYqSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABdESURBVHhe7d158P9T9QfwklSKQguhTZYsNWVJZUlJpaFoGbImLZgMYkYT8WUsI7QoRRlby0yljKIpRcaSQqVQlmSp7H34Wj4SXr/7uN7P99zvu/d3mb7f3/f9+uN7Zs7c+7qve88595xzz11er9f7/bS+w7///e/u0Ucf7Z588snuoYce6v7zn/90jz/+eEVlCwLQwWPmzJndE0880U1PT3eF71To49XCww8/3P3xj3/sTj755O4jH/lI9+Y3v7l75Stf2b3gBS/onvWsZ1V8/vOf36288srdm970pm6XXXbpjj766O6SSy6pvCI7XunbY489NuxPSael5FCmz1L9jyz33HNPd84553Sf/OQnu0033bRbbbXVKv9nPvOZ3VJLLdWtscYa3dZbb90dccQR3aWXXto98MADld6//vWv2h4dugVo69MgP1HeA7P3G6q0Baamprpdd921W3755btnPOMZnVsLChdffPHu1a9+dTdjxoyqfFAUVFhOVaUBTvOrX/2q22uvvaoRllhiidqWITggR3T99Kc/vZbBxRZbbFi25JJLdksvvXT38pe/vDvyyCO722+/vfaJU4IYHBRnnX7wwQcHV10nz4HB9ddf3+29997di170okr/2c9+dpUfPzLJw/CG6rzuda/rjj/++MozTgDQbXlxjEnyLm36D5yEYzDaZpttVhVQirvnPOc5FaOE+UFO89KXvrT77Gc/247gqTjKD3/4w26jjTbqVlhhhcoP/7khmi0qIzvnlK6yyirdV7/61Wqk9C/AOKI2SP/VO+SQQ6qcZEZv1AGCyjmDgdIOYHxF7nPPPXfIk2OIhv/85z8rv0nzLnX7D1XaAXBKnaUMHY6x5xcpctVVV+2OOuqoqjBQ0hopN9544+pIo7y0geSQkosxWkNoQ9ak6rV0lllmmRp5M60BRirGqlNo4B//+Ef3oQ99qHvuc59b24lKjBxacYJxTtLyixxmm8997nO1rzCREHCMQbbCwuZd6vYfCGukchDTAMPqXFCVBYGioEhJUUZxmVanvvCFL1QD4NM6YKaqKL1VPlRfO8ZqDRhEh5GhqX/PPfes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" alt="captcha">
+            </dd>
+            <!-- <dd><input name="valid" type="hidden" id="valid" value="ed243ee0-90d1-4e71-8379-a1c201a3cc7e"></dd> -->
+            <dd>
+                <a class="btn-send ui-link" id="loginBtn" (click)="Login()">{{Update?.login}}</a>
+                <button type="submit" style="display: none;"></button>
+            </dd>
+
+            <dd *ngIf="siteName=='mathaexchall'">
+                <a class="btn-send ui-link" id="loginBtn" (click)="LoginWithDemo()">{{Update?.LoginWithDemo}}</a>
+            </dd>
+            <dd id="errorMsg" class="state">
+                <ng-container *ngIf="f.userName.invalid && (f.userName.touched || submitted) && !result">
+                    {{Update?.Usernameisempty}}
+                </ng-container>
+                <ng-container *ngIf="f.password.invalid && (f.password.touched || submitted) && !f.userName.invalid && !result">
+                    {{Update?.passwordisempty}}
+                </ng-container>
+                <ng-container
+                    *ngIf="f.captcha.invalid && (f.captcha.touched || submitted) && !f.userName.invalid && !f.password.invalid && !result">
+                    <ng-container *ngIf="f.captcha.errors.required"> {{Update?.Validationcodeisempty}}</ng-container>
+                    <!-- <ng-container *ngIf="f.captcha.errors.pattern"> Invalid validation code!</ng-container> -->
+                </ng-container>
+                <ng-container *ngIf="result">
+                    {{result}}
+                </ng-container>
+            </dd>
+        </dl>
+    </form>
+
+    <app-policy-link></app-policy-link>
+    <app-extend-support *ngIf="siteName=='lc247'  || siteName=='winbuzz' || siteName=='lc247life' || siteName=='skyfair' || siteName=='bajimat'"></app-extend-support>
+
+    <app-support-wrap *ngIf="siteName!='betswiz' && siteName!='lc247'  && siteName!='winbuzz' && siteName!='lc247life' && siteName!='skyfair' && siteName!='bajimat'"></app-support-wrap>
+
+    <!-- <app-extra-wrap></app-extra-wrap> -->
+
+</div>

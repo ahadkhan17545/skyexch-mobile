@@ -1,0 +1,42 @@
+<div class="mian-wrap" *ngIf="loader">
+    <div class="gamehall" >
+    <!-- <ng-container  *ngIf="!isLogin">
+        <a [routerLink]="isLogin?['/']:['/login']" >
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_kabaddi.png" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Kabaddi</dt>
+                <dd >Play Now</dd>
+            </dl>
+        </a>
+    </ng-container> -->
+    <ng-container *ngIf="islc247allcondition">
+        <ng-container *ngFor="let awc of awcCasinoList_bdbet">
+            <a [ngClass]="{'entrance-half':!awc.isBig}" *ngIf="!awc.isSport"
+                (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <dd>{{Update?.PlayNow}}</dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_bdbet/{{awc.name}}.webp?v=52415896585" alt="" draggable="false">
+                
+            </a>
+            <a [ngClass]="{'entrance-half':!awc.isBig}" *ngIf="awc.isSport && awc.eventTypeId==7"
+                [routerLink]="isLogin?['/races',7]:[homeCom]">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <dd>{{Update?.PlayNow}}</dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_bdbet/{{awc.name}}.webp?v=52415896585" alt="" draggable="false">
+            </a>
+            <a [ngClass]="{'entrance-half':!awc.isBig}" *ngIf="awc.isSport && awc.eventTypeId==52"
+                [routerLink]="[highCom,52]">
+                <dl class="entrance-title">
+                    <dt>{{awc.name | titlecase}}</dt>
+                    <dd>{{Update?.PlayNow}}</dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_bdbet/{{awc.name}}.webp?v=52415896585" alt="" draggable="false">
+            </a>
+        </ng-container>
+    </ng-container>
+    </div>
+    </div>

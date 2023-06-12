@@ -1,0 +1,72 @@
+<div class="gamehall">
+    <a routerLink="{{inplayCom}}">
+        <dl id="onLiveBoard" class="on_live">
+            <dt>
+                <p class="live_icon"><span></span> {{Update?.live}}</p>
+            </dt>
+            <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                    <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                </dd>
+            </ng-container>
+        </dl>
+
+        
+        <ng-container *ngIf="siteName!='skybet369'">
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_sports.png?v=5263" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Sports</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </ng-container>
+        <ng-container *ngIf="siteName=='skybet369'">
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_skybet369.jpg" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Sports</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </ng-container>
+
+    </a>
+
+
+
+    <ng-container *ngIf="isIcasino || isskybet369">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',7]:[homeCom]">
+            <dl class="entrance-title">
+                <dt>Horse Racing</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_horse.png" alt="Horse Racing" draggable="false">
+        </a>
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',4339]:[homeCom]"
+            *ngIf="siteName!='lcexch'  && siteName!='vellki' && siteName!='jio365_22' && !islc247allcondition && siteName!='skybet365'">
+            <dl class="entrance-title">
+                <dt>Greyhound Racing</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_grey.webp?v=254789658" alt="" draggable="false">
+        </a>
+    </ng-container>
+
+
+
+
+    <a id="casinoLoginBtn" routerLink="{{inplayCom}}" *ngIf="isIcasino || isskybet369">
+        <img  src="https://www.static112233.com/m/assets/images/mobile/promo/icasino_p.jpg" alt="premium_fancy" draggable="false">
+        <dl class="entrance-title">
+            <dt>Premium Fancy</dt>
+            <dd>
+                <span>{{Update?.PlayNow}}</span>
+            </dd>
+        </dl>
+    </a>
+</div>

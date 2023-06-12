@@ -1,0 +1,183 @@
+<div class="mian-wrap" *ngIf="loader">
+    <app-lc247 *ngIf="islc247Home"></app-lc247>
+    <app-lchome *ngIf="lcexchcodesign"></app-lchome>
+    <app-crichome *ngIf="crichomedesign"></app-crichome>
+    <app-xpghome *ngIf="isxpg"></app-xpghome>
+    <app-betexch9 *ngIf="is9betexchHome"></app-betexch9>
+    <app-runx *ngIf="isrunXhome"></app-runx>
+    <app-diamondhome *ngIf="diamondcasinoHome"></app-diamondhome>
+    <app-iframehome *ngIf="isskybet369 || isIcasino"></app-iframehome>
+    <app-betwinnerhome *ngIf="betWinnerHome"></app-betwinnerhome>
+    <app-nayaludis *ngIf="nayaLudisHome"></app-nayaludis>
+    <app-lcexch *ngIf="isLcexchHome"></app-lcexch>
+    <app-palkihome *ngIf="palkiHome"></app-palkihome>
+    <app-baji365home *ngIf="baji365Home"></app-baji365home>
+    <app-cricexch *ngIf="isCricexch"></app-cricexch>
+    <app-skyfair *ngIf="isskyfair"></app-skyfair>
+    <app-betxhome *ngIf="isbetxHome"></app-betxhome>
+
+
+
+    <app-extend-support
+        *ngIf="siteName=='lc247'  || siteName=='cricbuzz365' || siteName=='wickets3' || siteName=='winbuzz' || siteName=='lc247life' || siteName=='skyfair' || siteName=='bajimat'">
+    </app-extend-support>
+    <app-support-wrap
+        *ngIf="siteName!='betswiz' && siteName!='cricbuzz365'  && siteName!='lc247life' && siteName!='skyfair' && siteName!='wickets3' && siteName!='winbuzz'  && siteName!='lc247' && siteName!='bajimat' && !isIcasino">
+    </app-support-wrap>
+    <app-policy-link *ngIf="!isIcasino && !isskybet369"></app-policy-link>
+    <app-extra-wrap *ngIf="!isIcasino && !isskybet369"></app-extra-wrap>
+</div>
+
+<ng-container *ngFor="let awc of cricbuzzerawcList_other">
+<div *ngIf="siteName=='tusky' || siteName=='bigwin365'  || siteName=='luckybuzz' || siteName=='betsx365' || siteName=='baazi365'" class="betbtn"
+(click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+  id="draggable" style="right:0;bottom:9%;"><a style="color:#12bcca">
+    <img width="66" height="66" class="select-none drop-shadow disabled-drag w-full" src="assets/images/entrance.svg"
+      alt="" data-v-0819dce8="">
+  </a></div>
+</ng-container>
+
+<div id="coming_soon" class="overlay" style="display: none;" *ngIf="siteName!='line1000'">
+    <div class="frame-wrap">
+        <div class="news-wrap news-wrap-frame">
+            <div class="side-content">
+                <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/coming_soon.jpg" alt="coming_soon" draggable="false">
+            </div>
+            <footer><a class="btn-send" (click)="hideOverlayInfo('#coming_soon')">CLOSE</a></footer>
+        </div>
+    </div>
+</div>
+
+
+<div id="marketing" class="overlay" style="display: none;" *ngIf="siteName=='skyexchM'">
+    <div class="frame-wrap">
+        <div class="news-wrap news-wrap-frame">
+            <div class="side-content">
+                <div class="main">
+                    <div class="prod one">
+                        <div>
+                            <label>To use this domain <span>please contact <i class="fa fa-phone" aria-hidden="true"
+                                        style="padding-left: 2px;"></i></span></label>
+                        </div>
+                        <div class="features">
+                            <h3 style="margin-bottom: 15px; font-size: 18px;"> To acquire this domain</h3>
+                            <span style="display: flex;">
+                                <a href="https://wa.me/{{Marketing_whatsapp}}" class="info" target="_blank"><i
+                                        class="fa fa-phone" aria-hidden="true"></i></a>
+                                <a href="https://wa.me/{{Marketing_whatsapp}}" class="mobfont">
+                                    <p> {{Marketing_whatsapp}}</p>
+                                </a>
+                            </span>
+                            <h2>OR</h2>
+                            <span style="display: flex;">
+                                <a class="info" href="skype:live:.cid.aca767b81e7a5a95?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='zoro'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.49d7965e09cff1ca?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Max'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.7affdef6a7c897d7?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Singham'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.e39e2f3f929534da?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Popeye'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.87e483044daa97f?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Sanjog'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.d46a30c7f8c9e28d?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Samaira'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.2deaba81b8b400db?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Phalansh'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.9b097f291f79c943?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Vasudeo'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.2d0bfe0a892473db?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Charlie'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+                                <a class="info" href="skype:live:.cid.28fdd74ed87c06b1?chat" target="_blank"
+                                    *ngIf="Marketing_skype =='Bidi'">
+                                    <i class="fa fa-skype" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="skype:live:.cid.aca767b81e7a5a95?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='zoro'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.49d7965e09cff1ca?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Max'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.7affdef6a7c897d7?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Singham'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.e39e2f3f929534da?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Popeye'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.87e483044daa97f?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Sanjog'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.d46a30c7f8c9e28d?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Samaira'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.2deaba81b8b400db?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Phalansh'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.9b097f291f79c943?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Vasudeo'">Click
+                                    here to message us directly on Skype</a>
+
+
+                                <a href="skype:live:.cid.2d0bfe0a892473db?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Charlie'">Click
+                                    here to message us directly on Skype</a>
+
+                                <a href="skype:live:.cid.28fdd74ed87c06b1?chat" target="_blank"
+                                    style="margin-top: 14px;font-size: 13px; color: #000;font-weight: 700; margin-left: 10px;"
+                                    *ngIf="Marketing_skype =='Bidi'">Click
+                                    here to message us directly on Skype</a>
+                            </span>
+                            <i class="fa fa-hand-o-down" style="font-size: 45px;"></i>
+                            <h3 style="padding: 10px;">To check this id please login with Demo Id </h3>
+                            <ul>
+                                <li> Username : Democl</li>
+                                <li>Password : Asdf1234</li>
+                            </ul>
+                            <a (click)="Login()" class="btncls">
+                                Login With DemoId
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <footer><a class="btn-send" (click)="HideupdateTerm()">CLOSE</a></footer>
+        </div>
+    </div>
+</div>

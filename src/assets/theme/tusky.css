@@ -1,0 +1,121 @@
+.login-head,
+.pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/KV-pic-tusky.png);
+}
+
+body.bg_login {
+    color: #222;
+    background-color: #ffb80c;
+    background-image: linear-gradient(56deg, #ffcc2e 4%, #ffb80c 42%);
+}
+.btn-send {
+    background-image: linear-gradient(-180deg, #464646 15%, #121212 100%)!important;
+    border-color: #000 !important;
+    color: #FFB80C!important;
+}
+.login-head h1,
+.pass-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/logo-login-skyEX.png);
+}
+.policy-link a {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+.bg_login .policy-link {
+    color: #000 !important;
+}
+header .top-logo {
+    flex: 1;
+    width: 39.8vw;
+    height: 11.8vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: -1.73333vw 0 0 1.86667vw;
+}
+
+
+@media (orientation: landscape) {
+
+    .login-head,
+    .pass-head {
+        background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+    }
+
+    .login-head h1,
+    .pass-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/logo-tusky.png);
+    }
+}
+
+.pass-head {
+    background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+}
+
+.pass-head h1 {
+    background-image: url(/images/mobile/tusky/logo-tusky.png);
+}
+
+.app-qrcode {
+    /* background: url(/images/mobile/tusky/appic-9wickets.png) center
+    no-repeat; */
+    background-size: cover;
+}
+
+
+
+.login-pop .login-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/KV-pic-tusky.png)
+}
+
+.login-pop .login-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/logo-tusky.png)
+}
+
+@media (orientation: landscape) {
+    .login-pop .login-head {
+        background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+    }
+
+    .login-pop .login-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/logo-tusky.png)
+    }
+}
+
+
+header {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+header .top-logo {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/tusky/logo-tusky.png)
+}
+
+.wrap-highlight .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.market-type .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.pop-wrap h3,
+.select-list h3 {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.side-head {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.login-RnR .policy-header,
+.login-policy .policy-header {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.btn-signup2 {
+    background-image: linear-gradient(-180deg, #8b6b05 0%, #8b6b05 100%);
+}
+
+.login {
+    text-align: center;
+    display: block
+}

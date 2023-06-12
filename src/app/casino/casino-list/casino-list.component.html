@@ -1,0 +1,151 @@
+<div class="mian-wrap" *ngIf="casinoType=='dia'  && !islc247allcondition  && siteName !='cricexch' && siteName !='jee365' && !crichomedesign  && !lcexchcodesign">
+
+    <h3>{{Update?.OurLiveCasinos}}</h3>
+    <div class="gamehall">
+        <a class="entrance-half" style="cursor: pointer;"
+            [routerLink]="['tp',casino.tableId,casino.tableName,casino.oddsUrl.replace('/d_rate/','')]"
+            *ngFor="let casino of casinoList">
+            <dl class="entrance-title">
+                <dt>{{casino.tableName}}</dt>
+                <dd>
+                    <span>Play Now</span>
+                </dd>
+             
+            </dl>
+            <img class="tp_image"  src="https://www.static112233.com/m/assets/images/casino_new/{{casino.tableName}}.jpg" alt="{{casino.tableName}}"
+                draggable="false">
+            <!-- <img class="tp_image bg-{{casino.tableName}}"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="{{casino.tableName}}" draggable="false"> -->
+        </a>
+    </div>
+</div>
+
+<div class="mian-wrap" *ngIf="!diamondcasinoHome">
+    <ul id="inPlayTab" class="tab col3" *ngIf="siteName=='cricexch'">
+        <!-- <li [ngClass]="{'select':selectedtab=='international'}"><a id="inplay"  (click)="changeTab('international');">International</a></li> -->
+        <li [ngClass]="{'select':selectedtab=='indian'}"><a id="today" (click)="changeTab('indian');">Indian</a></li>
+        <li [ngClass]="{'select':selectedtab=='diamond'}" style="height: 27px;"><a id="tomorrow"
+                (click)="changeTab('diamond');">
+                <img  src="https://www.static112233.com/m/assets/images/mobile/cricbuzzer/img12.gif" width="40px"></a>
+        </li>
+    </ul>
+    <ul id="inPlayTab" class="tab col3" *ngIf="siteName=='jee365'">
+        <li [ngClass]="{'select':selectedtab=='diamond'}" style="height: 27px;"><a id="tomorrow"
+                (click)="changeTab('diamond');">
+                <img  src="https://www.static112233.com/m/assets/images/mobile/cricbuzzer/img12.gif" width="40px"></a>
+        </li>
+        <li [ngClass]="{'select':selectedtab=='slot'}" style="height: 27px;"><a id="tomorrow"
+                (click)="changeTab('slot');">{{Update?.slots}}</a>
+        </li>
+    </ul>
+    <ng-container *ngIf="selectedtab=='international'">
+        <h3>{{Update?.InternationalLiveCasinos}}</h3>
+        <ng-container *ngIf="isLogin && isInrCurrency && !crichomedesign && !lcexchcodesign">
+            <div class="gamehall">
+                <a [ngClass]="{'entrance-half':!awc.isBig}"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of cricbuzzerawcList_Vnd">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <dd>
+                            <span>Play Now</span>
+                        </dd>
+                    </dl>
+                    <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+                </a>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isLogin && !isInrCurrency && !crichomedesign && !lcexchcodesign">
+            <div class="gamehall">
+                <a [ngClass]="{'entrance-half':!awc.isBig}"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of cricbuzzerawcList_other">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <dd>
+                            <span>Play Now</span>
+                        </dd>
+                    </dl>
+                    <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+                </a>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="isLogin && crichomedesign || lcexchcodesign">
+            <div class="gamehall">
+                <a [ngClass]="{'entrance-half':!awc.isBig}"
+                    (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+                    *ngFor="let awc of awcCasinoList_bdbet">
+                    <dl class="entrance-title">
+                        <dt>{{awc.name | titlecase}}</dt>
+                        <dd>
+                            <span>{{Update?.PlayNow}}</span>
+                        </dd>
+                    </dl>
+                    <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_bdbet/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+                </a>
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="selectedtab=='indian'">
+        <h3>{{Update?.IndianLiveCasinos}}</h3>
+        <div class="gamehall">
+            <a class="entrance-half " routerLink="/tpp/{{casino.opentable}}" *ngFor="let casino of amanCasinoList"
+                style="cursor: pointer">
+                <dl class="entrance-title">
+                    <dt>{{casino.CasinoName}}</dt>
+                    <dd>
+                        <span>Play Now</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/casino/aman/{{casino.tableName}}.png">
+            </a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="selectedtab=='diamond' && siteName!='betskyexch'">
+        <h3>{{Update?.DiamondLiveCasinos}}</h3>
+        <div class="gamehall">
+            <a class="entrance-half" style="cursor: pointer;"
+                [routerLink]="['tp',casino.tableId,casino.tableName,casino.oddsUrl.replace('/d_rate/','')]"
+                *ngFor="let casino of casinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.tableName}}</dt>
+                    <dd>
+                        <span>Play Now</span>
+                    </dd>
+                </dl>
+                <img class="tp_image"  src="https://www.static112233.com/m/assets/images/casino_new/{{casino.tableName}}.jpg" alt="{{casino.tableName}}"
+                    draggable="false">
+            </a>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="selectedtab=='slot'">
+        <h3>{{Update?.SlotsGames}}</h3>
+        <div class="casino-box-tabs">
+            <div class="casino-tabs-menu"><a (click)="scrollLeft()" class="arrow-tabs arrow-left"><i
+                        class="fas fa-chevron-left"></i></a>
+                <ul #tab1 class="nav nav-pills">
+                    <li (click)="getSlotcasinoAssetsList(pro)" class="nav-item" *ngFor="let pro of slotfilter"><a
+                            [ngClass]="pro == slotcode?'active':'null'" href="javascript:void(0)" class="nav-link"><img>
+                            <span>{{pro | titlecase}}</span></a></li>
+
+                </ul> <a (click)="scrollRight()" class="arrow-tabs arrow-right"><i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+        <div class="gamehall">
+            <ng-container *ngFor="let casino of slotlists">
+                <a class="entrance-half" *ngIf="casino.name != 'The Dog House' &&  casino.name != 'The Dog House Megaways'" 
+                    style="cursor: pointer;" (click)="opengame(casino.id)">
+                    <dl class="entrance-title" *ngIf="casino.name ">
+                        <dt>{{casino.name}}</dt>
+                        <dd>
+                            <span>Play Now</span>
+                        </dd>
+                    </dl>
+                    <img class="tp_image" [src]="casino.img" alt="{{casino.name}}" draggable="false"
+                        (load)="dosomething()">
+                </a>
+            </ng-container>
+        </div>
+
+    </ng-container>
+</div>

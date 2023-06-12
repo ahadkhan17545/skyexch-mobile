@@ -1,0 +1,235 @@
+
+ .policy-link{
+    color: rgba(0, 0, 0, 0.5);
+
+}
+ .policy-link a{
+    color: #000000b3 !important;
+
+}
+
+
+ .login-head,
+ .pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/KV-pic-palki.png);
+    background-size: cover !important;
+}
+
+ .login-head h1,
+ .pass-head h1 {
+    top: 43.66667vw;
+    width: 65.86667vw;
+    height: 22.13333vw;
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png);
+    margin-left: -37.06667vw;
+}
+
+@media (orientation: landscape) {
+
+     .login-head,
+     .pass-head {
+        background-image: linear-gradient(-180deg, #414141 0%, #000 100%);
+    }
+
+     .login-head h1,
+     .pass-head h1 {
+        top: 1.86667vw;
+        width: 51.46667vw;
+        height: 17.33333vw;
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png);
+        margin-left: -25.6vw;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16 / 9) {
+
+     .login-head h1,
+     .pass-head h1 {
+        top: 1.04948vmax;
+        width: 28.93553vmax;
+        height: 9.74513vmax;
+        margin-left: -10.3928vmax;
+    }
+}
+
+ .announce-header h1 {
+    color: #ffb80c;
+}
+
+ .news-wrap .announce-header {
+    background: url("/images/mobile/announcement/popup-header-palki.png") center no-repeat;
+    background-size: cover;
+}
+
+body.bg_login {
+    color: #222;
+    background-color: #ffb80c;
+    background-image: linear-gradient(56deg, #fff 4%, #fff 42%);
+}
+
+ input {
+    border: 1px solid #666;
+}
+
+ .login-head .betfair-wrap,
+ .pass-head .betfair-wrap {
+    color: #fff;
+    display: none;
+}
+
+ .login-head .betfair-wrap span,
+ .pass-head .betfair-wrap span {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/login/betfair_white.png);
+}
+
+ .pass-head {
+    background-image: linear-gradient(-180deg, #414141 0%, #000 100%);
+}
+
+ .pass-head h1 {
+    top: 2.66667vw;
+    width: 47.46667vw;
+    height: 16vw;
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png);
+    margin-left: -23.73333vw;
+}
+
+@media (orientation: landscape) {
+     .pass-head h1 {
+        top: 2.66667vw;
+        width: 47.46667vw;
+        height: 16vw;
+        margin-left: -23.73333vw;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16 / 9) {
+     .pass-head h1 {
+        top: 1.49925vmax;
+        width: 26.68666vmax;
+        height: 8.9955vmax;
+        margin-left: -13.34333vmax;
+    }
+}
+
+ .form-login dt {
+    color: #000;
+}
+
+ .btn-send,
+ .login {
+    background-image: linear-gradient(-180deg, #ffc800 15%, #ffc800 100%);
+    border-color: #ffc800;
+    color: #000;
+}
+
+ .btn-send.disable,
+ .disable.login {
+    background-image: linear-gradient(-180deg, #f6ecc6 0%, #e7dcb4 100%);
+    border-color: #dbd39f;
+    color: #999;
+}
+
+ .login:after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="rgb(255,184,12" fill-rule="evenodd" d="M5.672 11.238l2.066-2.355H0V7.117h7.776L5.672 4.762 6.8 3.5 10.82 8 6.8 12.5 5.67 11.238zM13.348 0c.435 0 .82.17 1.153.508.334.338.5.73.5 1.172v11.64c0 .443-.166.834-.5 1.172-.332.34-.717.508-1.152.508H1.898c-.434 0-.818-.17-1.15-.508-.334-.338-.5-.73-.5-1.172V10h1.65v3.32h11.45V1.68H1.898V5H.25V1.68c0-.443.166-.834.5-1.172C1.08.168 1.463 0 1.897 0h11.45z"/></svg>');
+}
+
+ .state {
+    color: #222;
+}
+
+ .txt-wrap {
+    background: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+ .app-qrcode {
+    background: url(https://www.static112233.com/m/assets/images/mobile/skyexchange/appic-skyexch.png) center no-repeat;
+    background-size: cover;
+}
+
+ .btn-apk {
+    color: #ffffff;
+}
+
+ .btn-send,
+ .login{
+    text-align: center
+
+}
+ .btn-send,
+ .login{
+    display: block
+
+}
+
+ .login-pop .login-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/KV-pic-palki.png)
+}
+
+
+ header .a-open_tv img {
+    width: 5.6vw;
+    height: 5.06667vw;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="%23000"/><stop offset="100%" stop-color="%23000"/></linearGradient><linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="72.529%"><stop offset="0%" stop-color="%2338AEFA"/><stop offset="100%" stop-color="%230B7DC5"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path fill="url(%23a)" d="M4 0h13a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm3 17h7v2H7v-2zM4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm11 6.024L8 12V4l7 4.024z"/><path fill="url(%23F8E71C)" d="M4 2h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm11 6.024L8 4v8l7-3.976z"/></g></svg>') no-repeat
+}
+
+ .login-pop .login-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png)
+}
+
+@media (orientation: landscape) {
+     .login-pop .login-head {
+        background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+    }
+
+     .login-pop .login-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png)
+    }
+}
+
+ input:focus,
+ .input-num .typeing {
+    color: #1E1E1E;
+    background-color: #FFF0CA;
+    box-shadow: inset 0 0.26667vw 1.33333vw rgba(161, 128, 45, 0.6);
+    border-color: #BE7809;
+    height: 38px;
+}
+
+ .entrance-title dd span {
+    animation: twink 1.4s infinite ease;
+}
+ .icon-xgame {
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="23fff"><path d="M20 18.624v-16.038c0-.748-.696-1.361-1.544-1.361h-.95c.051.135.068.269.085.404l1.578 15.978c.119 1.152-.848 2.169-2.154 2.274l-1.459.12h2.918c.831-.015 1.527-.628 1.527-1.376z" id="Path" fill="%23fff"/><path d="M16.42 16.761l-3.062-15.642c-.148-.741-.922-1.231-1.745-1.097l-10.371 1.646c-.823.133-1.366.83-1.218 1.572l3.078 15.642c.148.741.922 1.231 1.745 1.097l10.371-1.646c.807-.133 1.35-.83 1.202-1.572zm-4.313-5.041c-.626.815-1.728 1.142-2.733.904.082.208.132.371.181.43.23.371 1.004.652.84.993-.165.326-.477-.03-1.333.104-.856.133-1.021.563-1.3.311-.28-.267.346-.771.412-1.186.016-.074.016-.237 0-.46-.856.534-2.025.563-2.914-.015-1.152-.726-1.432-2.165-.626-3.202.774-.993 2.864-3.455 2.864-3.455s2.897 1.661 4 2.357c1.136.741 1.416 2.179.609 3.217z" fill="%23fff" fill-rule="nonzero"/><path d="M18.218 17.754l-1.483-16.091c-.064-.753-.781-1.311-1.579-1.25l-.973.075.08.271 2.966 15.895c.207 1.145-.606 2.245-1.818 2.441l-2.966.497 4.449-.362c.797-.045 1.387-.723 1.324-1.476z" fill="%23fff"/></g></svg>') no-repeat
+}
+
+ header {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ header .top-logo {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/palki/logo-palki.png)
+}
+
+ .wrap-highlight .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+ .market-type .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+ .pop-wrap h3,
+ .select-list h3 {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ .side-head {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ .login-RnR .policy-header,
+ .login-policy .policy-header {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}

@@ -1,0 +1,115 @@
+.login-head,
+.pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/KV-pic-luckybuzz.png);
+}
+
+.login-head h1,
+.pass-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/logo-luckybuzz.png);
+}
+header .top-logo {
+    margin-top: -10px;
+    flex: 1;
+    width: 36.8vw;
+    height: 12.8vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.login-head h1, .pass-head h1 {
+    position: absolute;
+    left: 50%;
+    top: 35.86667vw;
+    width: 69.33333vw;
+    height: 19.46667vw;
+    background-size: contain;
+    margin-left: -32.53333vw;
+}
+
+@media (orientation: landscape) {
+
+    .login-head,
+    .pass-head {
+        background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+    }
+
+    .login-head h1,
+    .pass-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/logo-luckybuzz.svg);
+    }
+}
+
+.pass-head {
+    background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+}
+
+.pass-head h1 {
+    background-image: url(/images/mobile/luckybuzz/logo-luckybuzz.png);
+}
+
+.app-qrcode {
+    /* background: url(/images/mobile/luckybuzz/appic-9wickets.png) center
+    no-repeat; */
+    background-size: cover;
+}
+
+
+
+.login-pop .login-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/KV-pic-luckybuzz.png)
+}
+
+.login-pop .login-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/logo-luckybuzz.png)
+}
+
+@media (orientation: landscape) {
+    .login-pop .login-head {
+        background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+    }
+
+    .login-pop .login-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/logo-luckybuzz.png)
+    }
+}
+
+
+header {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+header .top-logo {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/luckybuzz/logo-luckybuzz.png)
+}
+
+.wrap-highlight .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.market-type .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.pop-wrap h3,
+.select-list h3 {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.side-head {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.login-RnR .policy-header,
+.login-policy .policy-header {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.btn-signup2 {
+    background-image: linear-gradient(-180deg, #8b6b05 0%, #8b6b05 100%);
+}
+
+.login {
+    text-align: center;
+    display: block
+}

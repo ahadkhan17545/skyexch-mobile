@@ -1,0 +1,44 @@
+<h2>{{Update?.PlayerSettledBets}}</h2>
+
+<table class="table01">
+    <tbody>
+        <tr>
+            <th width="7%" class="align-L">{{Update?.sportsname}}
+            </th>
+            <th width="" class="align-L">{{Update?.BetId}}
+            </th>
+            <th width="">{{Update?.BetTime}}
+            </th>
+            <th width="">{{Update?.BetType}}
+            </th>
+            <th width="">{{Update?.odds}}
+            </th>
+            <th width="">SelName
+            </th>
+            <th width="">{{Update?.SettlementTime}}
+            </th>
+            <th width="">{{Update?.stakes}}
+            </th>
+            <th width="">{{Update?.profitandloss}}
+            </th>
+        </tr>
+    </tbody>
+    <tbody id="content">
+        <tr id="tempTr" *ngFor="let data of settleData">
+            <td class="align-L" id="loginDate">{{data.sportName}} > {{data.eventName}} > {{data.marketName}} >
+                {{data.selName}}</td>
+            <td class="align-L" id="loginMessage">{{data.betId}}</td>
+            <td id="ipAddress">{{data.betTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+            <td id="isp" class="{{data.betType}}">{{data.betType}}</td>
+            <td id="location">{{data.odds}}</td>
+            <td id="location">{{data.selName}}</td>
+            <td id="location">{{data.settlementTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+            <td id="location">{{data.stake}}</td>
+            <td id="location" [ngClass]="{'red':data.PL<0,'green':data.PL>0}">{{data.PL}}</td>
+        </tr>
+
+    </tbody>
+</table>
+<div id="noReportMessage" *ngIf="settleData.length==0" style="text-align: center;">
+    <p>{{Update?.NorecordsFound}}</p>
+</div>

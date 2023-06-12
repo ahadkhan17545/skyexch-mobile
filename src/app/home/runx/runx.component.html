@@ -1,0 +1,180 @@
+<div class="gamehall">
+    <a routerLink="{{inplayCom}}">
+        <dl id="onLiveBoard" class="on_live">
+            <dt>
+                <p class="live_icon"><span></span> {{Update?.live}}</p>
+            </dt>
+            <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                    <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                </dd>
+            </ng-container>
+        </dl>
+        <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_bdbet_sports.jpg?v=52148" alt="Sports" draggable="false">
+        <dl class="entrance-title">
+            <dt>Sports</dt>
+            <dd><span>{{Update?.PlayNow}}</span></dd>
+        </dl>
+
+    </a>
+    <ng-container *ngIf="siteName=='magic247'">
+        <a routerLink="{{inplayCom}}">
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_palki/betradar.webp?v=524152896585" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Virtual Cricket</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </a>
+    </ng-container>
+    <ng-container *ngIf="siteName=='wckt9'">
+        <a class="entrance" [routerLink]="[highCom]">
+            <dl class="entrance-title">
+                <dt>Virtual Cricket</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl><img alt="" draggable="false"  src="https://www.static112233.com/m/assets/images/awc_banner/awc_wckt9/saba.webp?v=254789658">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isSlot">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/casino/cas/slot']:['/login']">
+            <dl class="entrance-title">
+                <dt>{{Update?.slots}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/slots.webp?v=52415896585" alt="xgames" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isbetgame">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/betgames']:['/login']">
+            <dl class="entrance-title">
+                <dt>Betgames</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/betgame.webp?v=521" alt="poker" draggable="false">
+        </a>
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/twain']:['/login']">
+            <dl class="entrance-title">
+                <dt>Twain</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/twain.webp?v=524152896585" alt="poker" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isSNcasino">
+        <ng-container
+            *ngIf="siteName!='runexchco' && siteName!='magic247' && siteName!='wckt9' && siteName!='bet365'  && siteName!='winbuzz'  && siteName!='lc247life' && siteName!='skyfair' && siteName!='wickets3'  && siteName!='cricbuzz365' && siteName!='luck247'">
+            <a class="entrance" [ngClass]="{'entrance-half':!pro.isBig}"
+                [routerLink]="isLogin?['/sncasinolist',pro.providerCode]:[homeCom]" *ngFor="let pro of providerList">
+                <dl class="entrance-title">
+                    <dt>{{pro.providerName | titlecase}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/supernowa_banner/providers/{{pro.providerCode}}.webp?v=85741269"
+                    [alt]="pro.providerName" height="150px" draggable="false">
+            </a>
+        </ng-container>
+        <ng-container>
+            <a class="entrance"
+                [ngClass]="{'entrance-half':!pro.isBig && siteName!='runexchco'  && siteName!='luck247' && siteName!='magic247' && siteName!='bet365'  && siteName!='winbuzz'  && siteName!='lc247life'  && siteName!='skyfair' && siteName!='wickets3'  && siteName!='cricbuzz365'}"
+                [routerLink]="isLogin?['/sncasinolist',pro.providerCode]:[homeCom]" *ngFor="let pro of providerListLC">
+                <dl class="entrance-title">
+                    <dt>{{pro.providerName | titlecase}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_wckt9/{{pro.providerCode}}.webp?v=524152896585" [alt]="pro.providerName"
+                    height="150px" draggable="false">
+            </a>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="siteName=='runx' || siteName=='sports365' || siteName=='rajbet' || siteName=='vellki'">
+        <a class="entrance" [routerLink]="[highCom]">
+            <dl class="entrance-title">
+                <dt>Virtual Cricket</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl><img alt="" draggable="false"  src="https://www.static112233.com/m/assets/images/mobile/promo/virtual_runx.webp?v=524152896585">
+        </a>
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoLists_sexy">
+            <ng-container *ngIf="awc.name == 'SEXY BACCARAT'">
+            <dl class="entrance-title">
+                <dt>AE Slots</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl><img alt="" draggable="false"  src="https://www.static112233.com/m/assets/images/mobile/promo/aeslot_runx.webp?v=524152896585">
+            </ng-container>
+        </a>
+        <a  [ngClass]="{'entrance-half':!awc.isBig}"
+        (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+        *ngFor="let awc of awcCasinoLists_jili">
+        <ng-container *ngIf="awc.name == 'JILI'">
+            <dl class="entrance-title">
+                <dt>Jilly Lobby</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl><img alt="" draggable="false"  src="https://www.static112233.com/m/assets/images/mobile/promo/jillylobby_runx.webp?v=524152896585">
+            </ng-container>
+        </a>
+    </ng-container>
+    <ng-container *ngIf="siteName!='wckt9' && siteName!='winbuzz' && siteName!='lc247life'  && siteName!='skyfair' && siteName!='wickets3' && siteName!='cricbuzz365'  && siteName!='magic247'">
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoLists_runx">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_baaji/{{awc.name}}.webp?v=524152896585" alt="" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="siteName=='wckt9'">
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoLists_wckt9">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_wckt9/{{awc.name}}.webp?v=524152896585" alt="" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="siteName=='winbuzz' || siteName=='wickets3' || siteName=='cricbuzz365'  || siteName=='lc247life' || siteName=='skyfair'">
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoLists_winbuzz">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_main/{{awc.name}}.webp?v=524152896585" alt="" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="siteName=='magic247'">
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoLists_magic247">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_main/{{awc.name}}.webp?v=524152896585" alt="" draggable="false">
+        </a>
+    </ng-container>
+
+
+
+</div>

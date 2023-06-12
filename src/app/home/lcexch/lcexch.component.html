@@ -1,0 +1,108 @@
+<div class="gamehall">
+
+    <a routerLink="{{inplayCom}}">
+        <dl id="onLiveBoard" class="on_live">
+            <dt>
+                <p class="live_icon"><span></span> {{Update?.live}}</p>
+            </dt>
+            <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                    <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                </dd>
+            </ng-container>
+        </dl>
+        <ng-container>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_sports.png?v=5263" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Sports</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </ng-container>
+    </a>
+    <ng-container *ngIf="isSlot">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/casino/cas/slot']:['/login']">
+            <dl class="entrance-title">
+                <dt>{{Update?.slots}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/slots.webp?v=254789658" alt="xgames" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isbetgame">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/betgames']:['/login']">
+            <dl class="entrance-title">
+                <dt>Betgames</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/betgame.webp?v=254789658" alt="poker" draggable="false">
+        </a>
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/twain']:['/login']">
+            <dl class="entrance-title">
+                <dt>Twain</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/twain.webp?v=254789658" alt="poker" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isPoker">
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/poker']:['/login']">
+            <dl class="entrance-title">
+                <dt>{{Update?.poker}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/poker.webp?v=254789658" alt="poker" draggable="false">
+        </a>
+    </ng-container>
+    <ng-container *ngIf="isSNcasino ">
+        <ng-container>
+            <a class="entrance" [ngClass]="{'entrance-half':!pro.isBig}"
+                [routerLink]="isLogin?['/sncasinolist',pro.providerCode]:[homeCom]" *ngFor="let pro of providerList">
+                <dl class="entrance-title">
+                    <dt>{{pro.providerName | titlecase}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/supernowa_banner/providers/{{pro.providerCode}}.webp?v=85741269"
+                    [alt]="pro.providerName" height="150px" draggable="false">
+            </a>
+        </ng-container>
+
+        <ng-container>
+            <a class="imgzoom entrance-half" [routerLink]="isLogin?['/sncasino',sn.providerCode,sn.code]:[homeCom]"
+                *ngFor="let sn of snGameAssetsAll">
+                <dl class="entrance-title">
+                    <dt>{{sn.name | titlecase}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img [src]="sn.thumb" alt="" draggable="false">
+            </a>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="isInrCurrency && (siteName=='lcexch')">
+        <a [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasinoList_Vnd">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+    </ng-container>
+
+</div>

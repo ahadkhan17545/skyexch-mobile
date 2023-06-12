@@ -1,0 +1,90 @@
+<div class="marquee-box">
+  <h4>{{Update?.News}}</h4>
+  <div class="marquee">
+    <a *ngIf="siteName=='palki'" (click)="openAnnouncementPopUp()">EVENT:- NEPAL VS PAPUA NEW GUINEA বাজার:- 30 ওভার রান
+      PNG (89/90, 88/89 এবং 287.200.130 বাজি ভুল রেটের কারণে বাতিল হয়ে যাবে 11:11:05 থেকে 11:13:58 )... সৃষ্ট অসুবিধার
+      জন্য দুঃখিত</a>
+    <a *ngIf="siteName=='rajbet'" (click)="openAnnouncementPopUp()">
+      RajBet এ আপনাকে স্বাগতম! full premiumb site for casino lovers,Rajbet.win যারা এজেন্ট নিয়ে কাজ করতে আগ্রহী
+      এডমিন/সাব - এডমিন অথবা সুপার এজেন্ট এর সাথে যোগাযোগ করুন 
+    </a>
+
+    <a *ngIf="siteName=='runx'" (click)="openAnnouncementPopUp()">runx এ আপনাকে স্বাগতম! full premiumb site for casino
+      lovers runx.bet যারা এজেন্ট নিয়ে কাজ করতে আগ্রহী এডমিন অথবা সুপার এজেন্ট এর সাথে যোগাযোগ করুন ! অনলাইন এজেন্ট,
+      সুপার এজেন্ট, সাব এডমিন, এডমিন নিয়োগ দেওয়া হইতেছে কাজ করতে আগ্রহীরা হোয়াটসঅ্যাপে যোগাযোগ করুন সরাসরি এডমিনের
+      সাথে whatsapp নাম্বার +447949358122</a>
+    <a *ngIf="siteName=='runexchco'" (click)="openAnnouncementPopUp()">
+      সবাই কে runexch এর পক্ষ থেকে জানাই আন্তরিক অভিনন্দন । বাংলাদেশের সবচেয়ে বিশ্বস্ত বেটিং সাইট। 
+    </a>
+
+
+    <a *ngIf="siteName=='nayaludis' || siteName=='betbuz365' "
+      (click)="openAnnouncementPopUp()">
+      আমাদের সাইট এ কোন প্রকার VPN ব্যবহার করে চিটিং বাজি ধরলে সরাসরি কোম্পানি থেকে তার ID বন্ধ করা হবে তার কোন টাকা
+      ফেরতযোগ্য হবে না। তার জন্য তার আপলাইনের কিছু করার থাকবে না। কিন্ত সেই চিটিংবাজের সাথে যদি কোন ভাবে এজেন্ট বা সুপার
+      জড়িত থাকার প্রমাণ মিলে তা হলে একই অবস্থা তাদেরও হবে।</a>
+
+    <a (click)="openAnnouncementPopUp()"> {{tickers?tickers+' || ':''}} {{news}}</a>
+    <!-- <a (click)="openAnnouncementPopUp()" *ngIf="islc247allcondition">{{tickers?' | '+tickers:''}}</a>
+    <a (click)="openAnnouncementPopUp()" *ngIf="!islc247allcondition">{{news}} {{tickers?' | '+tickers:''}}</a> -->
+  </div>
+</div>
+
+<div id="announcementPopUp" class="overlay" style="display: none;">
+  <div class="news-wrap marquee-pop">
+    <div class="side-head">
+      <h3 class="a-depth">{{Update?.Announcement}}</h3>
+      <a class="close ui-link" (click)="closeAnnouncementPopUp();">{{Update?.close}}</a>
+    </div>
+    <div class="announce-wrap" id="announcementContent">
+      <div id="announcementTemplate" class="article-wrap">
+        <div id="announcementTemplate" class="article-wrap" *ngIf="siteName=='palki'">
+          <p id="textByLanguageType_0">EVENT:- NEPAL VS PAPUA NEW GUINEA বাজার:- 30 ওভার রান
+            PNG
+            (89/90, 88/89 এবং 287.200.130 বাজি ভুল রেটের কারণে বাতিল হয়ে যাবে 11:11:05 থেকে 11:13:58 )... সৃষ্ট
+            অসুবিধার
+            জন্য দুঃখিত</p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap" *ngIf="siteName=='runx'">
+          <p id="textByLanguageType_0">runx এ আপনাকে স্বাগতম! full premiumb site for casino
+            lovers runx.bet যারা এজেন্ট নিয়ে কাজ করতে আগ্রহী এডমিন অথবা সুপার এজেন্ট এর সাথে যোগাযোগ করুন ! অনলাইন
+            এজেন্ট, সুপার এজেন্ট, সাব এডমিন, এডমিন নিয়োগ দেওয়া হইতেছে কাজ করতে আগ্রহীরা হোয়াটসঅ্যাপে যোগাযোগ করুন
+            সরাসরি এডমিনের সাথে whatsapp নাম্বার +447949358122</p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap" *ngIf="siteName=='runexchco'">
+          <p id="textByLanguageType_0">সবাই কে runexch এর পক্ষ থেকে জানাই আন্তরিক অভিনন্দন । বাংলাদেশের সবচেয়ে বিশ্বস্ত
+            বেটিং সাইট। 
+          </p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap" *ngIf="siteName=='rajbet'">
+          <p id="textByLanguageType_0">
+            RajBet এ আপনাকে স্বাগতম! full premiumb site for casino lovers,Rajbet.win যারা এজেন্ট নিয়ে কাজ করতে আগ্রহী
+            এডমিন/সাব - এডমিন অথবা সুপার এজেন্ট এর সাথে যোগাযোগ করুন 
+          </p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap"
+          *ngIf="siteName=='nayaludis' || siteName=='betbuz365' ">
+          <p id="textByLanguageType_0">
+            আমাদের সাইট এ কোন প্রকার VPN ব্যবহার করে চিটিং বাজি ধরলে সরাসরি কোম্পানি থেকে তার ID বন্ধ করা হবে তার কোন
+            টাকা
+            ফেরতযোগ্য হবে না। তার জন্য তার আপলাইনের কিছু করার থাকবে না। কিন্ত সেই চিটিংবাজের সাথে যদি কোন ভাবে এজেন্ট বা
+            সুপার জড়িত থাকার প্রমাণ মিলে তা হলে একই অবস্থা তাদেরও হবে।</p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap" *ngFor="let news1 of vnews"
+          style="padding-bottom: 2vw !important;">
+          <p id="textByLanguageType_0">{{news1.ticker}}</p>
+        </div>
+        <div id="announcementTemplate" class="article-wrap" *ngFor="let news1 of pnews"
+          style="padding-bottom: 2vw !important;">
+          <p id="textByLanguageType_0">{{news1}}</p>
+        </div>
+        <!-- 
+        <p id="textByLanguageType_0" [innerHTML]="vnews?' | '+vnews:''"></p>
+        <p id="textByLanguageType_0" [innerHTML]="pnews?' | '+pnews:''"></p> -->
+        <!-- <p id="textByLanguageType_0" *ngIf="!islc247allcondition" [innerHTML]="vnews?' | '+vnews:''"></p>
+        <p id="textByLanguageType_0" *ngIf="!islc247allcondition" [innerHTML]="pnews?' | '+pnews:''"></p>
+        <p  id="textByLanguageType_0" *ngIf="islc247allcondition" [innerHTML]="vnews?' | '+vnews:''"></p> -->
+      </div>
+    </div>
+  </div>
+</div>

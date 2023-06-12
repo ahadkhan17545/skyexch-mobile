@@ -1,0 +1,65 @@
+<div class="ui-page ui-page-theme-a ui-page-active">
+
+  <app-open-bets></app-open-bets>
+
+
+  <app-header></app-header>
+  <app-marquee *ngIf="isLogin"></app-marquee>
+  <app-promote-banner *ngIf="isBannerShow && !loader"></app-promote-banner>
+  <app-nav></app-nav>
+  <app-settings></app-settings>
+  <app-search></app-search>
+
+  <!-- <div class="loading-overlay " style="display: none;" id="loading" *ngIf="siteName=='lc247'">
+      <div class="loading-wrap" style="display: flex;">
+        <div class="loading">
+          <div></div>
+          <div></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div> -->
+
+  <!-- <div class="loading-overlay anim-fade-out" style="display: none;" id="page_loading" *ngIf="siteName=='lc247'">
+      <div class="loading-wrap" style="display: flex;">
+        <div class="loading">
+          <div></div>
+          <div></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>  -->
+
+  <div class="loading-overlay " style="display: none;" id="loading">
+    <div class="loading-wrap" style="display: flex;">
+      <div class="loading">
+        <div></div>
+        <div></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <div class="loading-overlay " style="display: none;" id="page_loading">
+    <div class="loading-wrap" style="display: flex;">
+      <div class="loading">
+        <div></div>
+        <div></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>
+<div class="sticky-left-container"
+  *ngIf="siteName=='tusky' || siteName=='bigwin365'  || siteName=='luckybuzz' || siteName=='betsx365'">
+  <ul class="sticky-left">
+    <li>
+      <a href="/exchange/Mobile/Login">
+        <img class="star" width="32" height="32" title="" alt="" src="assets/images/offer.png?v=0.03">
+        <p>Betx365 Offer</p>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,117 @@
+.casino-box-tabs {
+    top: 50px;
+    padding: 3px 0;
+  }
+  
+  .casino-box-tabs {
+    // position: sticky;
+    margin: 1px 0px 0px;
+    z-index: 1;
+    width: 100%;
+    background: #23292e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .casino-tabs-menu {
+    width: 100%;
+  }
+  .casino-tabs-menu {
+    position: relative;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    transition: .75s;
+  }
+  li, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .arrow-tabs.arrow-left {
+    left: 0;
+  }
+  
+  .arrow-tabs.arrow-right {
+    right: 0;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .arrow-tabs {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 1279px) {
+    .arrow-tabs {
+      top: 0;
+    }
+  }
+  
+  .arrow-tabs {
+    display: none;
+    width: 30px;
+    position: absolute;
+    top: 6px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    background-color: #3c444b;
+    color: #aaafb5;
+    font-size: 16px;
+  }
+  
+  .casino-box-tabs ul {
+    display: flex;
+    margin: 0 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .casino-box-tabs ul {
+    margin: 0 40px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+  
+  .casino-box-tabs ul {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+  }
+  
+  .casino-box-tabs .nav-pills .nav-item {
+    margin-right: 10px;
+  }
+  .casino-box-tabs .nav-pills .nav-link {
+    min-height: unset;
+    border-radius: 12px;
+    padding: 5px;
+  }
+  .casino-box-tabs .nav-pills .nav-link.active {
+    border: 2px solid #fdcf13;
+  }
+  .casino-box-tabs .nav-pills .nav-link {
+    border: 2px solid #3c444b;
+    color: #aaafb5;
+    /* border-radius: 20px; */
+    background-color: transparent;
+    /* min-height: 50px; */
+    display: flex;
+    align-items: center;
+  }
+  .casino-box-tabs .nav-pills .nav-item img {
+    height: 20px;
+  }
+  .casino-box-tabs .nav-pills .nav-item img {
+    height: 30px;
+    margin-right: 5px;
+  }

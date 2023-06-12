@@ -1,0 +1,200 @@
+<div class="mian-wrap">
+  <div id="highlightLabel" class="highlight-fix">
+    <a class="a-search" (click)="openSearchWrap()">{{Update?.Search}}</a>
+
+    <div id="frame" class="wrap-highlight">
+      <a class="a-tab_prev" href="#" style="display: none">prev</a>
+
+      <ul id="label" style="left: 0px">
+        <li class="menu-casino"
+          *ngIf="(casinoList.length > 0 || !isLogin) && !isIcasino && !isskybet369 && !isEtgcasino && isCasinoTab">
+          <span class="tag-new">{{Update?.New}}</span>
+          <a id="casinoLoginBtn" [routerLink]="isLogin ? ['/casino'] : ['/login']"><img class="icon-casino"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Casino" />{{Update?.casino}}</a>
+        </li>
+        <li class="menu-casino" *ngIf="isEtgcasino && isLogin">
+          <span class="tag-new">{{Update?.New}}</span>
+          <a id="casinoLoginBtn" [routerLink]="isLogin ? ['/casino/awccasino'] : ['/login']"><img class="icon-casino"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Casino" />{{Update?.casino}}</a>
+        </li>
+        <!-- <li id="highlightTab_IPL">
+          <a routerLink="{{eventCom}}/31345701"><img class="icon-cricket"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" />FIFA Cup-22</a>
+        </li> -->
+        <!-- <li class="menu-casino" *ngIf="(casinoList.length > 0 || !isLogin) && !isIcasino && !isskybet369 && siteName=='cricbuzzer'">
+          <span class="tag-new">New</span>
+          <a id="casinoLoginBtn" [routerLink]="isLogin ? ['/lcasino'] : ['/login']"><img class="icon-casino"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Casino" />LCasino</a>
+        </li> -->
+
+        <ng-container *ngFor="
+            let sport of sportList;
+            trackBy: trackBySport;
+            let index = index
+          ">
+          <li id="highlightTab{{ sport.id }}" (click)="selectHighlight(sport, true)"
+            [ngClass]="{ select: sport.id == sportId }">
+            <span id="tagLive" class="tag-live"><strong></strong>{{ sport.inplayCounts }}</span>
+            <a><img class="icon-{{ sport.sportsName | lowercase }}"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif"
+                alt="transparent" alt="{{ sport.sportsName | titlecase }}" />{{ sport.sportsName | titlecase }}</a>
+          </li>
+        </ng-container>
+
+        <ng-container *ngIf="siteName=='vellki'">
+        <li id="supernowa_casino" *ngIf="isLogin && isSNcasino">
+          <a  [routerLink]="isLogin?['/sncasinolist/EZ']:[homeCom]">
+            <img style="    width: 85px; height: 15px;
+            margin: 2.13333vw 1.6vw 0 0;" class="icon-"  src="https://www.static112233.com/m/assets/supernowa.gif" /></a>
+        </li>
+        </ng-container>
+
+        <ng-container *ngIf="siteName!='vellki' && siteName!='lcexch'">
+        <li id="supernowa_casino" *ngIf="isLogin && isSNcasino">
+          <a  [routerLink]="isLogin?['/sncasinolist/SN']:[homeCom]">
+            <img style="    width: 85px; height: 15px;
+            margin: 2.13333vw 1.6vw 0 0;" class="icon-"  src="https://www.static112233.com/m/assets/supernowa.gif" /></a>
+        </li>
+      </ng-container>
+      
+      <!-- <ng-container *ngIf="accountInfo?.currencyCode != 'INR'"> -->
+        <li id="supernowa_casino" *ngIf="isLogin && isSlot" && siteName!='lcexch'>
+          <a [routerLink]="isLogin?['/casino/cas/slot']:['/login']" >
+            <img  class="icon-casino"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" />
+          {{Update?.slots}}</a>
+        </li>
+        <!-- </ng-container> -->
+        <li id="highlightTab_IPL">
+          <a routerLink="{{eventCom}}/28707823"
+            ><img
+              class="icon-cricket"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif"
+            />T20 Blast</a
+          >
+        </li>
+
+        <li id="highlightTab7"
+          *ngIf="siteName != 'nayaludis'  &&  siteName!='skybet365'">
+          <a [routerLink]="isLogin ? ['/races', 7] : ['/login']">
+            <img class="icon-HR"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Horse Racing" />
+            {{Update?.HorseRacing}}</a>
+        </li>
+        <li id="highlightTab4339"
+          *ngIf="siteName != 'nayaludis' &&  siteName!='skybet365'">
+          <a [routerLink]="isLogin ? ['/races', 4339] : ['/login']">
+            <img class="icon-dog"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="GreyHound Racing" />
+            {{Update?.GreyHoundRacing}}</a>
+        </li>
+
+        <li id="highlightTab_IPL" *ngIf="siteName=='cricbuzzer'">
+          <a (click)="awc_login_direct('152','4','AELOTTO')"><img class="icon-Games"
+               src="https://www.static112233.com/m/assets/images/mobile/latto.svg" />{{Update?.AeLotto}}</a>
+        </li>
+        <li id="highlightTab_IPL" *ngIf="siteName=='cricbuzzer'">
+          <a (click)="awc_login_direct('17','3','M8 SPORT')"><img class="icon-Games"
+               src="https://www.static112233.com/m/assets/images/mobile/othersport1.svg" />{{Update?.Sportbook}}</a>
+        </li>
+        <li *ngIf="isLogin && !isIcasino && !isskybet369 && isExchangeGames">
+          <a id="casinoLoginBtn" [routerLink]="isLogin ? ['/x-game'] : ['/login']"><img class="icon-xgame"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Casino" />{{Update?.ExchangeGames}}</a>
+        </li>
+
+        <li *ngIf="!isLogin && !isIcasino && !isskybet369 && isExchangeGames">
+          <a id="casinoLoginBtn" [routerLink]="['/login']"><img class="icon-xgame"
+               src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Casino" />{{Update?.ExchangeGames}}</a>
+        </li>
+        <!-- <li>
+          <a [routerLink]="['/virtual_sports']">
+            <img class=""  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Virtual">
+            Virtual Sports</a>
+        </li> -->
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap-highlight_list">
+    <h3>{{Update?.Highlights}}</h3>
+
+    <ul id="highlightList" class="highlight-list">
+      <li id="noDatali" *ngIf="selectedSport?.matches.length == 0">
+        {{Update?.Therearenoeventstobedisplayed}}.
+      </li>
+
+      <ng-container *ngFor="
+          let match of selectedSport?.matches | sortByDate: 'time';
+          trackBy: trackByEvent
+        ">
+        <li id="highlightEvent_{{ match.eventId }}"
+          class="inplay-{{ match.inplay || match.isBettable ? 'on' : 'off' }}">
+          <a class="info" [routerLink]="[eventCom, match.eventId]">
+            <dl>
+              <dt>
+                <span id="streamingIcon" class="game-live" *ngIf="match.videoEnabled">{{Update?.gamelive}}</span>
+                <span id="lowLiquidityTag" class="game-low_liq" style="display: none">{{Update?.LowLiquidity}}</span>
+                <span id="fancyBetIcon" class="game-fancy in-play" *ngIf="match.isFancy">
+                  <pre>{{Update?.inplay}}</pre>
+                  {{Update?.Fancy}}
+                </span>
+                <span id="bookMakerIcon" class="game-bookmaker in-play" *ngIf="match.isBm">
+                  <pre>{{Update?.inplay}}</pre>
+                  {{Update?.}bookmaker}
+                </span>
+                <span class="game-sportsbook" id="sportsBookIcon_2" style="display: inline-flex;"
+                  *ngIf="match.isPremium">Premium Cricket</span>
+
+                <!-- <span class="game-sportsbook" id="sportsBookIcon_2" style="display: inline-flex;"  *ngIf="match.premiumInplay==1">Premium Cricket</span> -->
+                <span id="feedingSiteIcon" class="game-sportsbook" style="display: none">{{Update?.sportsbook}}</span>
+                <span id="sportsBookIcon_1" class="game-sportsbook" style="display: none">Premium Tennis</span>
+                <span id="sportsBookIcon_2" class="game-sportsbook" style="display: none">Premium Cricket</span>
+                <span id="dateTimeInfo" class="time" *ngIf="match.inplay">{{Update?.inplay}} {{ match.score?.timeElapsed }}</span>
+                <span id="dateTimeInfo" class="time"
+                  *ngIf="match.isBettable && !match.inplay && (islc247allcondition)"
+                  style="background: green;padding: 1px 2px; border-radius: 0.8vw;color: white;">Adv</span>
+
+
+                <span id="dateTimeInfo" class="time" *ngIf="siteName=='mash247' && match.inplay">
+                  <ng-container *ngIf="match.todayTomorrow == 0">
+                    {{ match.time | date: "HH:mm" }}
+                  </ng-container>
+                  <ng-container *ngIf="match.todayTomorrow == 1">
+                    {{Update?.tomorrow}} {{ match.time | date: "HH:mm" }}
+                  </ng-container>
+                  <ng-container *ngIf="match.todayTomorrow > 1">
+                    {{ match.time | date: "yyyy-MM-dd HH:mm" }}
+                  </ng-container>
+                </span>
+
+                <span id="dateTimeInfo" class="time" *ngIf="!match.inplay">
+                  <ng-container *ngIf="match.todayTomorrow == 0">
+                    {{ match.time | date: "HH:mm" }}
+                  </ng-container>
+                  <ng-container *ngIf="match.todayTomorrow == 1">
+                    {{Update?.tomorrow}} {{ match.time | date: "HH:mm" }}
+                  </ng-container>
+                  <ng-container *ngIf="match.todayTomorrow > 1">
+                    {{ match.time | date: "yyyy-MM-dd HH:mm" }}
+                  </ng-container>
+                </span>
+                <span id="sportsBookEIcon_1" class="game-E" style="display: none"><i></i>{{Update?.soccer}}</span>
+                <span id="sportsBookEIcon_4" class="game-E" *ngIf="match.isVir || match.isSrl"><i></i>{{Update?.cricket}}</span>
+              </dt>
+              <dd class="eventName_" id="eventName_{{ match.eventId }}">
+                {{ match.home }}
+                <span class="in_play" *ngIf="match.score">{{
+                  match.score?.score
+                  }}</span><span *ngIf="match.away && !match.score">v</span>
+                {{ match.away }}
+              </dd>
+            </dl>
+          </a>
+          <a id="multiMarketPin_{{ match.eventId }}" [ngClass]="{ 'pin-on': checkIsMulti('market_'+match.eventId+'_'+match.marketId), 'pin-off': !checkIsMulti('market_'+match.eventId+'_'+match.marketId) }"
+            (click)="toggleFavourite(match,'market_'+match.eventId+'_'+match.marketId)"></a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <!-- <app-support-wrap></app-support-wrap>
+      <app-policy-link></app-policy-link>
+      <app-extra-wrap></app-extra-wrap> -->
+</div>

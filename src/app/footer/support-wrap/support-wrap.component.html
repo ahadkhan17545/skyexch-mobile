@@ -1,0 +1,96 @@
+<div id="supportWrap" class="support-wrap" *ngIf="siteName!='mx365' &&  !isskybet369 && siteName!='mathaexchall'">
+  <div class="support-service">
+    <ng-container>
+      <a id="support_whatsapp" (click)="openSupport('whatsapp')" class="support-whatsapp"
+        [ngClass]="{'open':supportOpen=='whatsapp'}">
+        <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="whatsApp" title="WhatsApp"></a>
+
+
+      <a id="support_fb" (click)="openSupport('fb')" class="support-fb" [ngClass]="{'open':supportOpen=='fb'}">
+        <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="facebook" title="facebook"></a>
+
+    </ng-container>
+
+
+    <a *ngIf="siteName!='betwinners'  && !isNayaLudisNet " id="support_email" (click)="openSupport('email')"
+      class="support-mail" [ngClass]="{'open':supportOpen=='email'}">
+      <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Email" title="Email"></a>
+
+    <a *ngIf=" !isNayaLudisNet " id="support_telegram" (click)="openSupport('telegram')" class="support-telegram"
+      [ngClass]="{'open':supportOpen=='telegram'}">
+      <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Telegram" title="Telegram">
+    </a>
+
+
+
+    <a *ngIf="!isNayaLudisNet &&  !isNayaLudisSite && siteName!='betwinners'" id="support_skype"
+      (click)="openSupport('skype')" class="support-skype" [ngClass]="{'open':supportOpen=='skype'}">
+      <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Skype" title="Skype">
+    </a>
+
+
+    <a *ngIf="!isNayaLudisNet && !isNayaLudisSite &&  siteName!='betwinners'" id="support_instagram"
+      (click)="openSupport('instagram')" class="support-ig" [ngClass]="{'open':supportOpen=='instagram'}">
+      <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Instagram" title="Instagram">
+    </a>
+
+  </div>
+  <div class="support-info">
+    <div id="supportDetail_whatsapp" class="support-detail" [ngClass]="{'open':supportOpen=='whatsapp'}">
+      <a *ngIf="!islc247allcondition && siteName !='betwinners'"
+        href="https://wa.me/{{ whatsapp }}"><span>{{whatsapp}}</span></a>
+      <a href="https://wa.me/{{ whatsapp1 }}" *ngIf="whatsapp1"><span>{{whatsapp1}}</span></a>
+      <a target="_blank" href="https://api.whatsapp.com/send?phone={{ whatsapp2 }}&text=Hi,%20I%20want%20to%20play"
+        *ngIf="whatsapp2"><span>{{whatsapp2}}</span></a>
+      <a target="_blank" href="https://wa.me/message/55E5GRJJSBHKB1" *ngIf="whatsapp3"><span>{{whatsapp3}}</span></a>
+      <a target="_blank" href="https://wa.me/message/H7D4ID35LEG5A1"
+        *ngIf="siteName =='betwinners'"><span>{{whatsapp}}</span></a>
+    </div>
+    <div id="supportDetail_fb" class="support-detail" [ngClass]="{'open':supportOpen=='fb'}">
+      <a href="https://www.facebook.com/groups/5476054282510652/?ref=share&mibextid=NSMWBT"
+        *ngIf="isNayaLudisSite"><span>nayaludisfbgroup</span></a>
+        <a href="https://www.facebook.com/groups/546487835985260/?ref=share&mibextid=afzh1R"
+        *ngIf="siteName == 'magic247'"><span>magic247</span></a>
+    </div>
+
+    <div *ngIf=" siteName !='betexch9'" id="supportDetail_email" class="support-detail"
+      [ngClass]="{'open':supportOpen=='email'}"><a
+        href="mailto:info@{{fullSiteName}}"><span>info@{{fullSiteName}}</span></a></div>
+
+
+    <div *ngIf="siteName=='betexch9'" id="supportDetail_email" class="support-detail"
+      [ngClass]="{'open':supportOpen=='email'}"><a href="mailto:skyxchange111@gmail.com"><span>support@9betexch.com
+        </span></a></div>
+
+    <div id="supportDetail_telegram" class="support-detail" [ngClass]="{'open':supportOpen=='telegram'}">
+      <a *ngIf="siteName=='betwinners'" href="https://t.me/betwinnersbd" class="ui-link"><span>betwinnersbd</span></a>
+      <ng-container *ngIf="siteName != 'betskyexch' && siteName != 'betwinners'">
+        <ng-container *ngIf="siteName != 'betwinners'  && !isNayaLudisNet ">
+          <a><span>www.t.me/official{{siteName}}info</span></a>
+          <a><span>www.t.me/{{siteName}}customersupport</span></a>
+        </ng-container>
+
+      </ng-container>
+    </div>
+
+
+    <div id="supportDetail_instagram" class="support-detail" [ngClass]="{'open':supportOpen=='instagram'}">
+      <a class="ui-link"><span>official{{siteName}}</span></a>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div id="supportWrap" class="support-wrap" style="margin-top: 20px;" *ngIf="isskybet369">
+  <div class="extra-wrap">
+
+
+    <div class="power-wrap-b" style="display:block">
+
+      <span>Powered by</span><img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Betfair">
+
+    </div>
+  </div>
+</div>

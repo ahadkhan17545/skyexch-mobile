@@ -1,0 +1,76 @@
+<div class="gamehall">
+    <a routerLink="{{inplayCom}}">
+        <dl id="onLiveBoard" class="on_live">
+            <dt>
+                <p class="live_icon"><span></span> {{Update?.live}}</p>
+            </dt>
+            <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                    <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                </dd>
+            </ng-container>
+        </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/9betexch/cricket2.JPG" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Sports</dt>
+                <dd><span>{{Update?.PlayNow}}</span></dd>
+            </dl>
+
+
+    </a>
+    <ng-container *ngIf="siteName=='betexch9'">
+        <a class="entrance" [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_kingmaker_AE">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/9betexch/{{awc.name}}.JPG" alt="" draggable="false">
+        </a>
+        <a class="entrance" [ngClass]="{'entrance-half':!awc.isBig}"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_kingmaker_jili">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/9betexch/{{awc.name}}.jpg" alt="" draggable="false">
+        </a>
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',7]:[homeCom]">
+            <dl class="entrance-title">
+                <dt>Horse Racing</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_horse.png" alt="Horse Racing" draggable="false">
+        </a>
+        <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',4339]:[homeCom]">
+            <dl class="entrance-title">
+                <dt>Greyhound Racing</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_grey.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance" [ngClass]="{'entrance-half':!awc.isBig}"
+        (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+        *ngFor="let awc of awcCasino_kingmaker_betx">
+        <dl class="entrance-title">
+            <dt>{{awc.name | titlecase}}</dt>
+            <dd>
+                <span>{{Update?.PlayNow}}</span>
+            </dd>
+        </dl>
+        <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_main/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+    </a>
+    </ng-container>
+
+
+</div>

@@ -1,0 +1,112 @@
+.red {
+    color: green;
+}
+
+.green {
+    color: red;
+}
+
+.lay {
+    background-color: #FAA9BA !important;
+    text-align: center;
+    color: black !important;
+}
+
+.back {
+    background-color: #80C2F1 !important;
+    text-align: center;
+    color: black !important;
+
+
+}
+.no {
+    background-color: #FAA9BA !important;
+    text-align: center;
+    color: black !important;
+}
+
+.yes {
+    background-color: #80C2F1 !important;
+    text-align: center;
+    color: black !important;
+
+
+}
+.table01,
+.table-s {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-bottom: 1px solid #7E97A7;
+    margin-bottom: 15px;
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.table01 caption,
+.table-s caption {
+    background-color: #3B5160;
+    border-bottom: 1px solid #7E97A7;
+    color: #fff;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 0 10px
+}
+
+.table01 th,
+.table-s th {
+    color: #243A48;
+    background-color: #E4E4E4;
+    border: 1px solid #7E97A7;
+    border-width: 1px 0 1px 0;
+    padding: 8px 10px
+}
+
+.table01 td,
+.table-s td {
+    border-top: 1px solid #eee;
+    padding: 8px 10px;
+    vertical-align: middle
+}
+
+.table01 a,
+.table-s a {
+    text-decoration: underline
+}
+
+.table01 .btn,
+.table-s .btn,
+.table01 .btn-send,
+.table-s .btn-send,
+.table01 .pages a,
+.pages .table01 a,
+.table-s .pages a,
+.pages .table-s a,
+.table01 .calendarTable_inputBox input,
+.calendarTable_inputBox .table01 input,
+.table-s .calendarTable_inputBox input,
+.calendarTable_inputBox .table-s input,
+.table01 .calendarTable_inputBox textarea,
+.calendarTable_inputBox .table01 textarea,
+.table-s .calendarTable_inputBox textarea,
+.calendarTable_inputBox .table-s textarea {
+    text-decoration: none
+}
+
+.over-wrap .table01:last-of-type,
+.over-wrap .table-s:last-of-type {
+    margin-bottom: 0
+}
+
+.table01 .win,
+.table-s .win,
+.table01 .to-win,
+.table-s .to-win {
+    color: #508D0E
+}
+
+h2{
+    font-size: 15px;
+    text-align: center;
+}

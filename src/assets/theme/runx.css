@@ -1,0 +1,137 @@
+
+
+ .login-head,
+ .pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/KV-pic-skyEX.png);
+}
+
+ .login-head h1,
+ .pass-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png);
+    margin-left: -25.53333vw;
+}
+
+ .login-head,
+ .pass-head {
+    background-size: cover !important;
+}
+@media (orientation: landscape) {
+
+     .login-head,
+     .pass-head {
+        background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+    }
+
+     .login-head h1,
+     .pass-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png);
+    }
+}
+
+ .login-head,
+ .pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/KV-pic-skyEX.png);
+}
+
+ .login-head h1,
+ .pass-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png);
+    margin-left: -35.53333vw !important;
+    height: 25.46667vw !important;
+}
+
+ .login-head,
+ .pass-head {
+    background-size: cover !important;
+}
+@media (orientation: landscape) {
+
+     .login-head,
+     .pass-head {
+        background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+    }
+
+     .login-head h1,
+     .pass-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png);
+    }
+}
+ .pass-head {
+    background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+}
+
+ .pass-head h1 {
+    background-image: url(/images/mobile/runx/logo-runx.png);
+}
+
+ .app-qrcode {
+    /* background: url(/images/mobile/runx/appic-9wickets.png) center
+    no-repeat; */
+    background-size: cover;
+}
+ header .sky-logo{
+    font-size: 0;
+    text-indent: -99999px
+}
+
+ .login-pop .login-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/KV-pic-skyEX.png)
+}
+
+ header .a-open_tv img {
+    width: 5.6vw;
+    height: 5.06667vw;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="%23000"/><stop offset="100%" stop-color="%23000"/></linearGradient><linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="72.529%"><stop offset="0%" stop-color="%2338AEFA"/><stop offset="100%" stop-color="%230B7DC5"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path fill="url(%23a)" d="M4 0h13a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4zm3 17h7v2H7v-2zM4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm11 6.024L8 12V4l7 4.024z"/><path fill="url(%23F8E71C)" d="M4 2h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm11 6.024L8 4v8l7-3.976z"/></g></svg>') no-repeat
+}
+
+ .login-pop .login-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png)
+}
+
+@media (orientation: landscape) {
+     .login-pop .login-head {
+        background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+    }
+
+     .login-pop .login-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png)
+    }
+}
+
+
+
+ header {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ header .top-logo {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/runx/logo-runx.png);
+    flex: 1;
+    width: 35.8vw;
+    height: 9.8vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: -0.73333vw 0 0 1.86667vw
+}
+
+ .wrap-highlight .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+ .market-type .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+ .pop-wrap h3,
+ .select-list h3 {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ .side-head {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+ .login-RnR .policy-header,
+ .login-policy .policy-header {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}

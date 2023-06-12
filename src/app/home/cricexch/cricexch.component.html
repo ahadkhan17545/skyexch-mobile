@@ -1,0 +1,125 @@
+<div class="gamehall">
+
+    <a routerLink="{{inplayCom}}">
+        <dl id="onLiveBoard" class="on_live">
+            <dt>
+                <p class="live_icon"><span></span> {{Update?.live}}</p>
+            </dt>
+            <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                    <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                </dd>
+            </ng-container>
+        </dl>
+        <ng-container>
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_sports.png?v=5263" alt="Sports" draggable="false">
+            <dl class="entrance-title">
+                <dt>Sports</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </ng-container>
+    </a>
+
+
+    <ng-container *ngIf="siteName =='cricexch'">
+
+        <a id="casinoLoginBtn" [routerLink]="isLogin?['/casino/cas/dia']:['/login']" *ngIf="isLogin">
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_casino.jpg" alt="Casino" draggable="false">
+            <dl class="entrance-title">
+                <dt>{{Update?.OurLiveCasinos}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </a>
+        <a *ngIf="siteName =='cricexch'" id="casinoLoginBtn" [routerLink]="isLogin?['/casino/cas/aura']:['/login']">
+            <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/indian_casino.jpg" alt="Casino" draggable="false">
+            <dl class="entrance-title">
+                <dt>Indian Live Casino</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+        </a>
+        <ng-container>
+            <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',7]:[homeCom]">
+                <dl class="entrance-title">
+                    <dt>Horse Racing</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_horse.png" alt="Horse Racing" draggable="false">
+            </a>
+            <a class="entrance" style="cursor: pointer" [routerLink]="isLogin?['/races',4339]:[homeCom]"
+                *ngIf="siteName!='lcexch' && siteName!='vellki' && siteName!='jio365_22' && !islc247allcondition && siteName!='skybet365'">
+                <dl class="entrance-title">
+                    <dt>Greyhound Racing</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_grey.webp?v=254789658" alt="" draggable="false">
+            </a>
+        </ng-container>
+
+        <ng-container *ngIf="!isLogin">
+            <a class="entrance-half" style="cursor: pointer;" [routerLink]="['/login']"
+                *ngFor="let casino of amanCasinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.tableName}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/casino/aman/{{casino.tableName}}.png">
+            </a>
+        </ng-container>
+        <ng-container *ngIf="!isLogin">
+            <a class="entrance-half" style="cursor: pointer;" [routerLink]="['/login']"
+                *ngFor="let casino of casinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.tableName}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img class="tp_image"  src="https://www.static112233.com/m/assets/images/casino_new/{{casino.tableName}}.jpg"
+                    alt="{{casino.tableName}}" draggable="false">
+            </a>
+        </ng-container>
+
+        <ng-container *ngIf="isLogin">
+            <a class="entrance-half" style="cursor: pointer;" routerLink="/tpp/{{casino.opentable}}"
+                *ngFor="let casino of amanCasinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.tableName}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img  src="https://www.static112233.com/m/assets/images/casino/aman/{{casino.tableName}}.png">
+            </a>
+        </ng-container>
+        <ng-container *ngIf="isLogin">
+            <a class="entrance-half" style="cursor: pointer;"
+                [routerLink]="['/casino/tp',casino.tableId,casino.tableName,casino.oddsUrl.replace('/d_rate/','')]"
+                *ngFor="let casino of casinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.tableName}}</dt>
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+                <img class="tp_image"  src="https://www.static112233.com/m/assets/images/casino_new/{{casino.tableName}}.jpg"
+                    alt="{{casino.tableName}}" draggable="false">
+            </a>
+        </ng-container>
+
+
+    </ng-container>
+
+
+</div>

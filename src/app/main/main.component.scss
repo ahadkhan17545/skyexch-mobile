@@ -1,0 +1,23 @@
+
+.anim-fade-out {
+    opacity: 0;
+      -webkit-animation: fadeout 4s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadeout 4s; /* Firefox < 16 */
+          -ms-animation: fadeout 4s; /* Internet Explorer */
+           -o-animation: fadeout 4s; /* Opera < 12.1 */
+              animation: fadeout 4s;
+  }
+  
+  @keyframes fadeout {
+    0%{
+        opacity:1;
+      }
+      50%
+      {
+        opacity:0;
+      }
+      100%
+      {
+        opacity:0;
+      }
+  }

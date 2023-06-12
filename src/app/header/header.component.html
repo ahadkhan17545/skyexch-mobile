@@ -1,0 +1,74 @@
+
+<header *ngIf="!isLogin">
+	
+	<h1 class="top-logo"  *ngIf="!isIcasino"></h1>
+  <a *ngIf="siteName=='palki'" target="_blank" href="https://palki.info/" class="btn-signup2  ui-link" style="color: #fff;"><i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp;{{Update?.Signup}}</a>
+  <a *ngIf="isNayaLudisSite" target="_blank" href="https://agent9w.com/" class="btn-signup2  ui-link" style="color: #fff;"><i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp;{{Update?.Signup}}</a>
+  <a *ngIf="isNayaLudisNet" target="_blank" href="http://agentlist247.com/" class="btn-signup2  ui-link" style="color: #fff;"><i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp;{{Update?.Signup}}</a>
+  <a *ngIf="siteName=='lc247'" target="_blank" href="https://www.lc247.info/" class="btn-signup3  ui-link" style="color: #67f0c2;">{{Update?.Signup}}</a>
+  <a *ngIf="siteName=='lc247co' || siteName=='xpgexch' || siteName == 'sports365'  || siteName == 'rajbet'" target="_blank" href="" class="btn-signup3  ui-link" style="color: #FFB80C;">{{Update?.Signup}}</a>
+  <a *ngIf="siteName == 'vellki'" target="_blank" href="https://wa.me/+447748282954" class="btn-signup3  ui-link" style="color: #000;">{{Update?.Signup}}</a>
+  <a *ngIf="siteName == 'runx'" target="_blank" href="https://ouragentlist.pro/" class="btn-signup3  ui-link" style="color: #000;">{{Update?.Signup}}</a>
+  <a *ngIf="siteName == 'cricbuzz365'" target="_blank" href="https://cricbuzz365.info" class="btn-signup3  ui-link" style="color: #000;">{{Update?.Signup}}</a>
+
+	<!-- <a *ngIf="siteName == 'betexch9'" target="_blank" href="https://www.skyexc.com" id="logcls1" class="login-index ui-link">{{Update?.Signup}}</a> -->
+
+	<a  id="logcls1" style="    margin-left: 5px;" class="login-index ui-link" routerLink="/login" *ngIf="!isIcasino && !isskybet369">{{Update?.Login}}</a>
+	
+</header>
+
+<header *ngIf="isLogin">
+
+  <ul>
+    <li class="li-tv_bet">
+      <a id="openTV" class="a-open_tv ui-link" style="display: none;" (click)="showTv()">
+        <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent">
+      </a>
+      <a id="openBetsBtn" class="a-open_bets ui-link" (click)="listBets()">
+        <img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent">{{Update?.Bets}}
+      </a>
+    </li>
+    <li id="menuRefreshIcon" style="display: none;">
+      <img class="refresh-bar"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent">
+    </li>
+    <li class="main-wallet" *ngIf="!isIcasino">
+      <!-- 加open打開-->
+      <a id="multiWallet" class="a-wallet ui-link">
+        <ul id="accountCredit" *ngIf="!isClicked">
+          <li><span>{{Update?.Main}}</span> <span id="betCredit"> {{accountInfo?.currencyCode}} {{fundInfo?.balance | number:'1.2-2'}}</span></li>
+          <li><span>{{Update?.Exposure}} </span> <span id="totalExposure" [ngClass]="{'red':fundInfo?.exposure>0}"> {{fundInfo?.exposure | number:'1.2-2'}}</span></li>
+          <li class="nums" *ngIf="siteName!='betswiz'">+<span id="vendorQuantity">2</span> </li>
+        </ul>
+        <p class="loading-bar" id="menuRefreshLoading" *ngIf="isClicked">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+      </a>
+      <a class="a-refresh ui-link" id="menuRefresh" (click)="FundExpo('click')" title="Refresh Main Wallet"><img
+           src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"></a>
+    </li>
+    <li><a class="a-setting ui-link" title="Setting"><img  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"></a>
+    </li>
+  </ul>
+
+
+
+  <div id="msgBox" class="message-wrap {{status}} to-open_bets" *ngIf="msgData">
+    <div class="message">
+      <h4 id="header">{{!msgData.msg?msgData:msgData.msg}}</h4>
+      <p class="info" *ngIf="msgData.backlay">
+        <span id="sideType" class="{{msgData.backlay=='yes' || msgData.backlay=='back'?'back':'lay'}}">{{msgData.backlay | uppercase}}</span>
+        <strong id="selectionName">{{msgData.runnerName}}</strong> <strong id="stake"> {{msgData.stake}}</strong> at
+        {{Update?.odds}} <strong id="odds">{{msgData.mtype!='fancy'?msgData.odds:msgData.score+'/'+msgData.rate}}</strong>
+      </p>
+    </div>
+    <a id="close" class="close ui-link" (click)="removeMsg()">{{Update?.close}}</a>
+  </div>
+
+</header>

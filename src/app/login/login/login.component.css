@@ -1,0 +1,7 @@
+.fa-eye-slash,.fa-eye{
+    position: absolute; color: #212121; right: 3px; top: 65%; transform: translateY(-70%); border: none; padding: 7px;
+}
+.form-login img{
+    right: 0.86667vw;
+    top: 2.13333vw;
+}

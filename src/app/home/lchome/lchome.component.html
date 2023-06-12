@@ -1,0 +1,208 @@
+<ul id="inPlayTab" class="tab col3" *ngIf="lcexchcodesign">
+    <div class="casino-box-tabs" style="background: #212121;">
+        <div class="casino-tabs-menu">
+            <a (click)="scrollLeft1()" class="arrow-tabs arrow-left"><i class="fas fa-chevron-left"></i></a>
+            <ul #tab2 class="nav nav-pills">
+                <li class="select"><a id="inplay"
+                        [routerLink]="isLogin?['/casino/cas/international']:['/login']">{{Update?.International}}</a>
+                </li>
+                <li
+                    *ngIf="siteName!='runx' && siteName!='sports365'   && siteName!='vellki' && siteName!='rajbet'  && siteName!='cricbuzz365' && siteName!='wickets3' && siteName!='winbuzz'">
+                    <a id="today" [routerLink]="isLogin?['/sncasinolist/SN']:['/login']"><img
+                             src="https://www.static112233.com/m/assets/images/mobile/cricbuzzer/supernowa.gif" width="75px"
+                            style="vertical-align: middle;"></a>
+                </li>
+                <li >
+                    <a id="today" [routerLink]="isLogin?['/casino/cas/aura']:['/login']">{{Update?.aura}}</a>
+                </li>
+                <li style="height: 27px;"
+                    *ngIf="siteName !='xpgexch' && siteName!='runx'  && siteName!='sports365'  && siteName!='vellki' && siteName!='rajbet' && siteName!='cricbuzz365' && siteName!='wickets3' && siteName!='winbuzz' && siteName!='cricbuzz365' && siteName!='wickets3' && siteName!='winbuzz'">
+                    <a id="tomorrow" [routerLink]="isLogin?['/casino/cas/dia']:['/login']">
+                        <img  src="https://www.static112233.com/m/assets/images/mobile/cricbuzzer/img12.gif" width="40px"></a>
+                </li>
+                <li *ngIf="siteName!='runx' &&  siteName!='sports365'  && siteName!='vellki' && siteName!='rajbet' && siteName!='cricbuzz365' && siteName!='wickets3' && siteName!='winbuzz'"
+                    style="height: 27px;"><a id="tomorrow"
+                        [routerLink]="isLogin?['/casino/cas/slot']:['/login']">{{Update?.slots}}</a>
+                </li>
+                <li *ngIf="siteName!='runx' &&  siteName!='sports365'  && siteName!='vellki' && siteName!='rajbet' && siteName!='cricbuzz365' && siteName!='wickets3' && siteName!='winbuzz'"
+                    style="height: 27px;"><a id="tomorrow"
+                        [routerLink]="isLogin?['/poker']:['/login']">{{Update?.poker}}</a>
+                </li>
+
+            </ul>
+            <a (click)="scrollRight1()" class="arrow-tabs arrow-right"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+</ul>
+<div class="gamehall">
+    <ng-container *ngIf="lcexchcodesign">
+
+        <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_evolution_ezugi">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" [routerLink]="isLogin?['/sncasinolist/EZ']:['/login']">
+            <dl class="entrance-title">
+                <dt>Ezugi</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/Ezugi.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance is Big" [routerLink]="isLogin?['/betgames']:['/login']">
+            <dl class="entrance-title">
+                <dt>Betgames</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/betgame.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance isBig" [routerLink]="isLogin?['/poker']:['/login']">
+            <dl class="entrance-title">
+                <dt>Poker</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/poker.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_Ae_sexy">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" [routerLink]="isLogin?['/casino/cas/slot']:['/login']">
+            <dl class="entrance-title">
+                <dt>Slots</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/slot.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a  class="entrance-half"
+            [routerLink]="isLogin?['/sncasinolist/SN']:['/login']">
+            <dl class="entrance-title">
+                <dt>Supernowa</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/SN.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a  class="entrance-half"
+            [routerLink]="isLogin?['/casino/cas/aura']:['/login']">
+            <dl class="entrance-title">
+                <dt>Aura</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/EURAGAMING.svg" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" [routerLink]="isLogin?['/casino/cas/dia']:['/login']">
+            <dl class="entrance-title">
+                <dt>Diamond</dt>
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/DIAMONDCASINO.svg" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_Ae_sexy">
+            <dl class="entrance-title">
+                <dt>{{awc.prod_name | titlecase}}</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/awc_poster/{{awc.prod_name}}.png" alt="" draggable="false">
+        </a>
+        <a routerLink="{{inplayCom}}" class="">
+            <dl id="onLiveBoard" class="on_live">
+                <dt>
+                    <p class="live_icon"><span></span> {{Update?.live}}</p>
+                </dt>
+                <ng-container *ngFor="let sport of sportList;trackBy:trackBySport; let index = index">
+                    <dd id="onLiveCount_{{sport.sportsName}}" *ngIf="index<6">
+                        <p>{{sport.sportsName | titlecase}}</p><span id="count">{{sport.inplayCounts}}</span>
+                    </dd>
+                </ng-container>
+            </dl>
+
+            <ng-container>
+                <img  src="https://www.static112233.com/m/assets/images/mobile/gamehall/banner_sports.png" alt="Sports" draggable="false">
+                <dl class="entrance-title">
+                    <dt>Sports</dt>
+
+                    <dd>
+                        <span>{{Update?.PlayNow}}</span>
+                    </dd>
+                </dl>
+            </ng-container>
+        </a>
+        <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_jili">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance isBig"
+            (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_kingmaker">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance-half" (click)="awc_login_direct(awc.prod_code,awc.prod_type,awc.prod_name,awc.game_code)"
+            *ngFor="let awc of awcCasino_international">
+            <dl class="entrance-title">
+                <dt>{{awc.name | titlecase}}</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/{{awc.name}}.webp?v=254789658" alt="" draggable="false">
+        </a>
+        <a class="entrance is Big" [routerLink]="isLogin?['/twain']:['/login']">
+            <dl class="entrance-title">
+                <dt>Twain</dt>
+
+                <dd>
+                    <span>{{Update?.PlayNow}}</span>
+                </dd>
+            </dl>
+            <img  src="https://www.static112233.com/m/assets/images/awc_banner/lcexch_co/twain.webp?v=254789658" alt="" draggable="false">
+        </a>
+
+    </ng-container>
+</div>

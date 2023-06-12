@@ -1,0 +1,42 @@
+<div class="mian-wrap home-page">
+    <div class="casino-box-tabs" *ngIf="providerList.length > 0">
+        <div class="casino-tabs-menu"><a (click)="scrollLeft()" href="javascript:void(0)"
+                class="arrow-tabs arrow-left"><i class="fas fa-chevron-left"></i></a>
+            <ul #tab1 class="nav nav-pills">
+                <li (click)="getSNcasinoAssetsList(pro.providerCode)" class="nav-item" *ngFor="let pro of providerList">
+                    <a href="javascript:void(0)" class="nav-link"
+                        [ngClass]="pro.providerCode == providerCode?'active':'null'"><img
+                            src="/assets/images/supernowa/{{pro.providerCode}}.png">
+                        <span>{{pro.providerName}}</span></a>
+                </li>
+            </ul> <a (click)="scrollRight()" href="javascript:void(0)" class="arrow-tabs arrow-right"><i
+                    class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="gamehall">
+        <ng-container *ngIf="!islc247allcondition">
+            <a class="entrance-half" style="cursor: pointer;"
+                routerLink="/sncasino/{{casino.providerCode}}/{{casino.code}}" *ngFor="let casino of SNcasinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.name}}</dt>
+                    <dd>
+                        <span>Play Now</span>
+                    </dd>
+                </dl>
+                <img class="tp_image" [src]="casino.thumb" alt="{{casino.name}}" draggable="false">
+            </a>
+        </ng-container>
+        <ng-container *ngIf="islc247allcondition">
+            <a class="entrance-half" style="cursor: pointer;" (click)="openGame(casino.providerCode,casino.code)"
+                *ngFor="let casino of SNcasinoList">
+                <dl class="entrance-title">
+                    <dt>{{casino.name}}</dt>
+                    <dd>
+                        <span>Play Now</span>
+                    </dd>
+                </dl>
+                <img class="tp_image" [src]="casino.thumb" alt="{{casino.name}}" draggable="false">
+            </a>
+        </ng-container>
+    </div>
+</div>

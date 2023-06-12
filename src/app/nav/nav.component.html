@@ -1,0 +1,80 @@
+<nav>
+  <ul>
+    <!-- <li id="mini" class="main-nav">
+			<a href="javascript:MobileMenuHandler.openMiniGame();" class="ui-link">
+				<img class="icon-promote" src="assets/images/entrance.svg" alt="mini">
+			</a>
+		</li> -->
+ 
+    <li id="sports" [routerLinkActive]="['select']" *ngIf="!isIcasino && !isskybet369">
+      <a class="ui-link" [routerLink]="[highCom]">
+        <img class="icon-sports"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+          alt="Sports">{{Update?.sports}}
+      </a>
+    </li>
+    <li id="cricket" [routerLinkActive]="['select']" *ngIf="isIcasino || isskybet369">
+      <a class="ui-link" [routerLink]="[highCom]">
+        <img class="icons-cricket"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+          alt="Sports">{{Update?.cricket}}
+      </a>
+    </li>
+
+    <li id="inPlay" [routerLinkActive]="['select']">
+      <a class="ui-link" [routerLink]="[inplayCom]">
+        <img class="icon-inplay"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+          alt="In-Play">{{Update?.inplay}}
+      </a>
+    </li>
+
+    <li  id="home" class="main-nav" [routerLinkActive]="['select']">
+      <a class="ui-link" [routerLink]="[homeCom]">
+        <img class="icon-home"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Home">{{Update?.home}}
+      </a>
+    </li>
+
+    <!-- <li id="multiMarket" *ngIf="!isLogin" [routerLinkActive]="['select']">
+        <a class="ui-link" [routerLink]="['/multimarkets']">
+          <img class="icon-pin"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Multi Markets">Multi Markets
+        </a>
+      </li> -->
+
+
+    <ng-container *ngIf="!isIcasino && !isskybet369">
+      <li id="multiMarket" [routerLinkActive]="['select']" *ngIf="isMultiMarket && siteName!='skyexchM'">
+        <a class="ui-link" [routerLink]="['/multimarkets']">
+          <img class="icon-pin"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+            alt="Multi Markets">{{Update?.MultiMarkets}}
+        </a>
+      </li>
+      <li id="casino" [routerLinkActive]="['select']" *ngIf="isCasinoTab">
+        <a class="ui-link" [routerLink]="isLogin?['/casino']:['/login']">
+          <img class="icon-casino"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+            alt="Casinos">{{Update?.casino}}
+        </a>
+      </li>
+      <li id="account" [routerLinkActive]="['select']">
+        <a class="ui-link" [routerLink]="isLogin?['/account']:['/login']">
+          <img class="icon-account"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent"
+            alt="Account">{{Update?.Account}}
+        </a>
+      </li>
+    </ng-container>
+
+    <ng-container *ngIf="isIcasino || isskybet369">
+      <li id="soccer" [routerLinkActive]="['select']">
+        <a class="ui-link" [routerLink]="[highCom+'/1']">
+          <img class="icons-soccer"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Soccer">
+          {{Update?.soccer}}
+        </a>
+      </li>
+
+      <li id="tennis" [routerLinkActive]="['select']">
+        <a class="ui-link" [routerLink]="[highCom+'/2']">
+          <img class="icons-tennis"  src="https://www.static112233.com/m/assets/images/mobile/transparent.gif" alt="transparent" alt="Tennis">Tennis
+        </a>
+      </li>
+    </ng-container>
+
+
+  </ul>
+</nav>

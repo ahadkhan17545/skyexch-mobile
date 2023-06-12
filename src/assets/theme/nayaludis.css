@@ -1,0 +1,96 @@
+.login-head,
+.pass-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/KV-pic-nayaludis.png);
+}
+
+.login-head h1,
+.pass-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/logo-nayaludis.png);
+}
+
+@media (orientation: landscape) {
+
+    .login-head,
+    .pass-head {
+        background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+    }
+
+    .login-head h1,
+    .pass-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/logo-nayaludis.svg);
+    }
+}
+
+.pass-head {
+    background-image: linear-gradient(-180deg, #ffcc2e 0%, #ffb80c 58%);
+}
+
+.pass-head h1 {
+    background-image: url(/images/mobile/nayaludis/logo-nayaludis.png);
+}
+
+.app-qrcode {
+    /* background: url(/images/mobile/nayaludis/appic-9wickets.png) center
+    no-repeat; */
+    background-size: cover;
+}
+
+
+
+.login-pop .login-head {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/KV-pic-nayaludis.png)
+}
+
+.login-pop .login-head h1 {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/logo-nayaludis.png)
+}
+
+@media (orientation: landscape) {
+    .login-pop .login-head {
+        background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+    }
+
+    .login-pop .login-head h1 {
+        background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/logo-nayaludis.png)
+    }
+}
+
+
+header {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+header .top-logo {
+    background-image: url(https://www.static112233.com/m/assets/images/mobile/nayaludis/logo-nayaludis.png)
+}
+
+.wrap-highlight .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.market-type .select a {
+    background-image: linear-gradient(-180deg, #FFB80C 15%, #FFA00C 100%)
+}
+
+.pop-wrap h3,
+.select-list h3 {
+    background-image: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.side-head {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.login-RnR .policy-header,
+.login-policy .policy-header {
+    background: linear-gradient(-180deg, #FFCC2E 0%, #FFB80C 58%)
+}
+
+.btn-signup2 {
+    background-image: linear-gradient(-180deg, #8b6b05 0%, #8b6b05 100%);
+}
+
+.login {
+    text-align: center;
+    display: block
+}
